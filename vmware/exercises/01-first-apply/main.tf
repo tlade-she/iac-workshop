@@ -40,7 +40,7 @@ resource "vsphere_virtual_machine" "workshop_vm" {
   scsi_type = data.vsphere_virtual_machine.template.scsi_type
 
   firmware = var.firmware
-  wait_for_guest_timeout = 0
+  wait_for_guest_net_timeout = 0
 
   network_interface {
     network_id   = data.vsphere_network.network.id
